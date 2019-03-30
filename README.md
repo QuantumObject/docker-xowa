@@ -18,7 +18,7 @@ To install docker in Ubuntu 18.04 use the commands:
 
 To run container use the command below:
 
-    $ docker run -d -v yours/storage:/opt/xowa/wiki -p 8080 quantumobject/docker-xowa
+    $ docker run -d -v yours/storage:/opt/xowa/ -p 8080 sblop/xowa_offline_wikipedia
   
 note: -v yours/storage:/opt/xowa/wiki   ==> to add,and/or to keep the differents wikipedia after upgrading , replacing your container.  
 ## Accessing the Xowa applications:

@@ -25,7 +25,7 @@ COPY startup.sh /etc/my_init.d/startup.sh
 RUN chmod +x /etc/my_init.d/startup.sh
 
 # VOLUME for wiki folder . where all the data is loaded from wikipedia. 
-VOLUME /opt/xowa/wiki
+VOLUME /opt/xowa
 
 # to allow access from outside of the container  to the container service
 # at that ports need to allow access from firewall if need to access it outside of the server. 
