@@ -1,5 +1,5 @@
 #name of container: docker-xowa
-#versison of container: 0.3.1
+#versison of container: 0.3.2
 FROM quantumobject/docker-baseimage:18.04
 MAINTAINER Angel Rodriguez  "angelrr7702@gmail.com"
 
