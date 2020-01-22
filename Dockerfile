@@ -1,7 +1,7 @@
 #name of container: docker-xowa
 #versison of container: 0.3.2
 FROM quantumobject/docker-baseimage:18.04
-MAINTAINER Angel Rodriguez  "angelrr7702@gmail.com"
+MAINTAINER Angel Rodriguez  "angel@quantumobject.com"
 
 # Update the container
 # Installation of nesesary package/software for this containers...
