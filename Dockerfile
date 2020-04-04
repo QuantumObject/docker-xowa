@@ -1,11 +1,12 @@
 #name of container: docker-xowa
-#versison of container: 0.3.2
+#versison of container: 0.3.3
 FROM quantumobject/docker-baseimage:18.04
 MAINTAINER Angel Rodriguez  "angel@quantumobject.com"
 
 # Update the container
 # Installation of nesesary package/software for this containers...
-RUN apt-get update && apt-get install -y -q openjdk-8-jre unzip bzip2 p7zip-full \
+RUN apt-get update && apt-get install -y -q --no-install-recommends openjdk-8-jre unzip bzip2 p7zip-full \ 
+                                                                    imagemagick inkscape texlive djvulibre-bin dvipng \
                     && apt-get clean \
                     && rm -rf /tmp/* /var/tmp/*  \
                     && rm -rf /var/lib/apt/lists/*
@@ -25,7 +26,7 @@ COPY startup.sh /etc/my_init.d/startup.sh
 RUN chmod +x /etc/my_init.d/startup.sh
 
 # VOLUME for wiki folder . where all the data is loaded from wikipedia. 
-VOLUME /opt/xowa
+VOLUME /opt/xowa/wiki
 
 # to allow access from outside of the container  to the container service
 # at that ports need to allow access from firewall if need to access it outside of the server. 
