@@ -6,7 +6,7 @@ MAINTAINER Angel Rodriguez  "angel@quantumobject.com"
 # Update the container
 # Installation of nesesary package/software for this containers...
 RUN apt-get update && apt-get install -y -q --no-install-recommends openjdk-8-jre unzip bzip2 p7zip-full \ 
-                                                                    imagemagick inkscape \
+                                                                    imagemagick inkscape texlive djvulibre-bin \
                     && apt-get clean \
                     && rm -rf /tmp/* /var/tmp/*  \
                     && rm -rf /var/lib/apt/lists/*
