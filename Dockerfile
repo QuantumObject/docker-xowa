@@ -1,11 +1,12 @@
 #name of container: docker-xowa
-#versison of container: 0.3.2
+#versison of container: 0.3.3
 FROM quantumobject/docker-baseimage:18.04
 MAINTAINER Angel Rodriguez  "angel@quantumobject.com"
 
 # Update the container
 # Installation of nesesary package/software for this containers...
-RUN apt-get update && apt-get install -y -q openjdk-8-jre unzip bzip2 p7zip-full \
+RUN apt-get update && apt-get install -y -q --no-install-recommends openjdk-8-jre unzip bzip2 p7zip-full \ 
+                                                                    imagemagick inkscape \
                     && apt-get clean \
                     && rm -rf /tmp/* /var/tmp/*  \
                     && rm -rf /var/lib/apt/lists/*
